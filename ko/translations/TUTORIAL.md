@@ -10,7 +10,7 @@
 
 두 번째 파트에서는 스마트 컨트랙트를 만들고 블록체인에 배포하는 방법을 설명합니다.
 
-이 튜토리얼을 진행하기 위해서는 `eosio`가 설치되어 있어야 하고 `nodeos`와 `cleos`가 PATH 환경변수에 등록된 디렉토리에 설치되어 있어야 합니다.
+이 튜토리얼을 진행하기 위해서는 EOSIO 소프트웨어가 설치되어 있어야 하고 `nodeos`와 `cleos`가 PATH 환경변수에 등록된 디렉토리에 설치되어 있어야 합니다.
 
 (역자 주: `eosio`를 빌드하면 build/programs 디렉토리 아래에 `nodeos`와 `cleos` 디렉토리 아래 실행 바이너리가 있습니다. 상대 경로를 사용해도 무방합니다.)
 
@@ -24,7 +24,6 @@ $ nodeos -e -p eosio --plugin eosio::wallet_api_plugin --plugin eosio::chain_api
 ...
 eosio generated block 046b9984... #101527 @ 2018-04-01T14:24:58.000 with 0 trxs
 eosio generated block 5e527ee2... #101528 @ 2018-04-01T14:24:58.500 with 0 trxs
-
 ```
 
 명령어 가장 앞쪽의 `nodeos`는 node를 실행합니다.
@@ -80,7 +79,7 @@ Locked: default
 
 모든 블록체인은 `eosio`이라는 유일한 초기화 계정의 master key로 시작합니다. 블록체인을 이용하기 위해서는 `eosio` 계정의 비밀키를 지갑에 담아야 합니다.
 
-다음 명령어를 통해 `eosio`의 master key를 지갑에 담겠습니다.
+다음 명령어를 통해 `eosio`의 master key를 지갑에 담겠습니다. master key는 `nodeos` 설정 디렉토리의 `config.ini` 파일에 있습니다. 튜토리얼에서는 기본 설정 디렉토리를 사용했습니다. 리눅스 시스템의 경로는 `~/.local/share/eosio/nodeos/config`이고, MacOS 시스템의 경로는 `~/Library/Application Support/eosio/nodeos/config`입니다.
 
 
 ```
@@ -92,10 +91,10 @@ imported private key for: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
 
 이제 지갑에 `eosio` 계정의 비밀키를 담았기 때문에 초기 시스템 컨트랙트를 설정할 수 있습니다. 개발 용도로 디폴트 `eosio.bios` 컨트랙트를 사용할 수 있습니다. 이 `eosio.bios` 컨트랙트를 이용하여 다른 계정의 자원 할당을 직접 제어하고 다른 권한 관련 api를 호출할 수 있습니다. 퍼블릭 블록체인에서는 `eosio.bios` 컨트랙트를 통해 일반 컨트랙트의 메모리, 네트워크 및 CPU 활동을 위한 대역폭을 예약할 수 있는 토큰의 staking과 unstaking을 관리할 수 있습니다.
 
-`eosio.bios` 컨트랙트는 `eosio` 소스 코드의 `contract` 폴더에 있습니다. `eosio` 소스의 루트 경로에서 `eosio.bios`를 실행시킬 때 아래의 명령어를 사용할 수 있습니다. 만약 다른 위치에서 `eosio.bios`를 실행하고 싶다면 `eosio.bios`의 절대 경로를 입력하면 됩니다.
+`eosio.bios` 컨트랙트는 EOSIO 소스 코드의 `contracts/eosio.bios` 디렉토리에 있습니다. `eosio` 소스의 루트 경로에서 `eosio.bios`를 실행시킬 때 아래의 명령어를 사용할 수 있습니다. 만약 다른 위치에서 `eosio.bios`를 실행하고 싶다면 `eosio.bios`의 절대 경로를 입력하면 됩니다.
 
 ```
-$ cleos set contract eosio contracts/eosio.bios -p eosio
+$ cleos set contract eosio build/contracts/eosio.bios -p eosio
 Reading WAST...
 Assembling WASM...
 Publishing contract...
@@ -125,20 +124,19 @@ executed transaction: 414cf0dc7740d22474992779b2416b0eabdbc91522c16521307dd68205
 
 아래에 보게 됩니다만, 액션은 다수의 컨트랙트로 실행될 수 있습니다.
 
-커맨드 마지막 부분에 사용한 `-p eosio`는 `cleos`에게 `eosio` 계정의 권한을 사용하여 액션을 실행하라고 알려줍니다. 그러면 `cleos`는 앞서 지갑에 담았던 `eosio`의 비밀키를 사용합니다.
+커맨드 마지막 부분에 사용한 `-p eosio`는 `cleos`에게 `eosio` 계정의 권한을 사용하여 액션을 실행하라고 알려줍니다. 그러면 `cleos`는 앞서 지갑에 담았던 `eosio` 계정의 비밀키를 사용합니다.
 
 
 ## 계정 생성
 
-이제 베이직 시스템 컨트랙트를 셋업했기 때문에 계정을 만들 수 있습니다.
+이제 베이직 시스템 컨트랙트를 셋업했기 때문에 계정을 만들 수 있습니다. `user`, `tester`라는 계정 두 개를 만들 계획이고, 각 계정마다 비밀키/공개키가 필요합니다. 튜토리얼에서는 이 두 개의 계정에 동일한 비밀키/공개키를 사용하겠습니다.
 
-먼저 계정을 위한 키를 생성합니다.
+먼저 두 계정에 사용할 키를 생성합니다.
 
 ```
 $ cleos create key
 Private key: 5Jmsawgsp1tQ3GD6JyGCwy1dcvqKZgX6ugMVMdjirx85iv5VyPR
 Public key: EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
-
 ```
 
 이어서 생성한 키를 지갑에 담습니다.
@@ -146,6 +144,8 @@ Public key: EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
 $ cleos wallet import 5Jmsawgsp1tQ3GD6JyGCwy1dcvqKZgX6ugMVMdjirx85iv5VyPR
 imported private key for: EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
 ```
+
+**주의** 위의 예시에 나온 키를 사용하지 말고, 실제로 `cleos`를 실행했을 때 나오는 키를 사용해야 합니다!
 
 키는 자동으로 지갑에 추가되지 않습니다. 이 단계를 건너뛰면 계정에 대한 컨트롤을 잃게 됩니다.
 
@@ -162,6 +162,8 @@ $ cleos create account eosio tester EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq
 executed transaction: 414cf0dc7740d22474992779b2416b0eabdbc91522c16521307dd682051af083 366 bytes  1000 cycles
 #         eosio <= eosio::newaccount            {"creator":"eosio","name":"tester","owner":{"threshold":1,"keys":[{"key":"EOS7ijWCBmoXBi3CgtK7DJxentZZ...
 ```
+
+**주의** `create account` 커맨드의 인수로 키 두 개가 필요합니다. 앞엣것은 (프러덕션 환경에서 매우 엄중한 보안 아래에 보관해야 할) OwnerKey이고, 뒤엣것은 ActiveKey입니다. 튜토리얼에서는 편의상 구분 없이 사용합니다.
 
 우리가 `eosio::account_history_api_plugin`를 사용하고 있기 때문에 생성한 공개키로 제어할 수 있는 모든 계정을 확인할 수 있습니다.
 
@@ -187,10 +189,10 @@ $ cleos create account eosio eosio.token  EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDv
 ...
 ```
 
-이제 `${EOSIO_SOURCE}/contracts/eosio.token`에 있는 컨트랙트를 배포합니다.
+이제 `${EOSIO_SOURCE}/build/contracts/eosio.token`에 있는 컨트랙트를 배포합니다.
 
 ```
-$ cleos set contract eosio.token contracts/eosio.token -p eosio.token
+$ cleos set contract eosio.token build/contracts/eosio.token -p eosio.token
 Reading WAST...
 Assembling WASM...
 Publishing contract...
@@ -226,7 +228,6 @@ executed transaction: 528bdbce1181dc5fd72a24e4181e6587dace8ab43b2d7ac9b22b201799
 $ cleos push action eosio.token create '[ "eosio", "1000000000.0000 EOS", 0, 0, 0]' -p eosio.token
 executed transaction: 0e49a421f6e75f4c5e09dd738a02d3f51bd18a0cf31894f68d335cd70d9c0e12  260 bytes  1000 cycles
 #   eosio.token <= eosio.token::create          {"issuer":"eosio","maximum_supply":"1000000000.0000 EOS","can_freeze":0,"can_recall":0,"can_whitelis...
-
 ```
 
 또는, named argument로 자세하게 호출하는 방법도 있습니다.
@@ -242,7 +243,7 @@ executed transaction: 0e49a421f6e75f4c5e09dd738a02d3f51bd18a0cf31894f68d335cd70d
 
 이 토큰을 생성하기 위하여 `eosio.token` 컨트랙트의 권한이 필요합니다. `eosio.token` 컨트랙트가 `EOS`와 같은 토큰 심볼 네임스페이스를 "소유"하기 때문입니다. 여러 주체들이 자동으로 토큰 심볼 구매가 가능하도록, 앞으로 eosio.token 컨트랙트가 변경될 수 있습니다. 그래서 위의 액션을 실행하려면 커맨드에 `-p eosio.token`를 붙여야 합니다.
 
-### 유저들에게 토큰 발행
+### `user` 계정에 토큰 발행
 
 이제 토큰을 만들었으니, 발행자는 새로운 토큰들을 앞서 만든 `user` 계정으로 발행할 수 있습니다.
 
@@ -294,9 +295,9 @@ $ cleos push action eosio.token issue '["user", "100.0000 EOS", "memo"]' -p eosi
 }
 ```
 
-###  tester 계정으로 토큰 이체
+### `tester`계정으로 토큰 이체
 
-이제 계정 `user`에 토큰이 얼마 들어가 있으니, `tester` 계정으로 이체하겠습니다. 권한은 `-p user`를 사용하겠습니다.
+이제 계정 `user`의 잔고에 토큰이 들어가 있으니, `tester` 계정으로 이체하겠습니다. `user`가 이 액션을 허가한다 의미로 권한 인자 `-p user`를 사용합니다.
 
 ```
 $ cleos push action eosio.token transfer '[ "user", "tester", "25.0000 EOS", "m" ]' -p user
@@ -308,9 +309,9 @@ executed transaction: 06d0a99652c11637230d08a207520bf38066b8817ef7cafaab2f0344aa
 ```
 
 
-## Hello World Contract
+## Hello World 컨트랙트
 
-다음 단계로 우리의 첫 "hello world" 컨트랙트를 만들어 봅시다. "hello"라는 폴더를 만들고 "hello/hello.cpp" 파일에 다음 내용을 추가합니다.
+다음 단계로 우리의 첫 "hello world" 컨트랙트를 만들어 봅시다. "hello"라는 디렉토리를 만들고 `cd`로 디렉토리로 들어간 후 "hello.cpp" 파일을 만들어 아래 내용을 추가합니다.
 
 #### hello/hello.cpp
 ```
@@ -372,13 +373,14 @@ executed transaction: 28d92256c8ffd8b0255be324e4596b7c745f50f85722d0c4400471bc18
 
 위 커맨드의 `-p tester`에 사용한 `tester`는 권한 계정이고, `user`는 단순히 인자 하나입니다. 컨트랙트 실행시 자신이 가진 권한 계정으로 인증하려면, 컨트랙트를 이렇게 바꿔야 합니다.
 
-hi() 함수를 이렇게 바꿉니다. (역자 주: 컨트랙트 업데이트가 필요합니다. 방법은 배포와 동일하게 `cleos set contract`를 사용하면 됩니다.)
+"hello.cpp" 파일의 hi() 함수를 이렇게 바꿉니다.
 ```
 void hi( account_name user ) {
    require_auth( user );
    print( "Hello, ", name{user} );
 }
 ```
+wast 파일을 컴파일하고 ABI를 만드는 과정을 다시 진행하고, `set contract`를 다시 실행하면 변경된 내용이 배포됩니다.
 
 일부러 현재의 권한과 사용하는 권한을 다르게 설정하여 컨트랙트 액션을 실행하면 에러가 발생합니다.
 ```
@@ -401,13 +403,14 @@ executed transaction: 235bd766c2097f4a698cfb948eb2e709532df8d18458b92c9c6aae74ed
 
 
 ## 거래소 컨트랙트 배포하기
+위의 예제와 비슷하게, 거래소 컨트랙트를 배포하겠습니다. EOSIO 소프트웨어 루트에서 실행하는 커맨드는 아래와 같습니다.
 
 ```
 $ cleos create account eosio exchange  EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
 executed transaction: 4d38de16631a2dc698f1d433f7eb30982d855219e7c7314a888efbbba04e571c  364 bytes  1000 cycles
 #         eosio <= eosio::newaccount            {"creator":"eosio","name":"exchange","owner":{"threshold":1,"keys":[{"key":"EOS7ijWCBmoXBi3CgtK7DJxe...
 
-$ cleos set contract exchange contracts/exchange -p exchange
+$ cleos set contract exchange build/contracts/exchange -p exchange
 Reading WAST...
 Assembling WASM...
 Publishing contract...
@@ -419,6 +422,4 @@ executed transaction: 5a63b4de8a1da415590778f163c5ed26dc164c960185b20fd834c297cf
 
 ## 번역 정보
 
-이 문서의 영문 원본 [TUTORIAL.md](https://github.com/EOSIO/eos/blob/master/TUTORIAL.md)의 최종 수정 시점은 한국 표준시 2018년 4월 2일 23시 30분이며, revision은 24e1c37f38ae062c355b70ee6361f41a15c96dab 입니다.
-
-영문 원본은 EOSIO/eos 저장소의 issue2015-complete-developer-tutorial 브랜치로 업데이트되고 있습니다. 
+이 문서의 영문 원본 [TUTORIAL.md](https://github.com/EOSIO/eos/blob/master/TUTORIAL.md)의 최종 수정 시점은 한국 표준시 2018년 4월 5일 03시 39분이며, revision은 0b40e0e86acf21be91dc020079bde55c4c6923fb 입니다.
