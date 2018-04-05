@@ -422,4 +422,7 @@ executed transaction: 5a63b4de8a1da415590778f163c5ed26dc164c960185b20fd834c297cf
 
 ## 번역 정보
 
-이 문서의 영문 원본 [TUTORIAL.md](https://github.com/EOSIO/eos/blob/master/TUTORIAL.md)의 최종 수정 시점은 한국 표준시 2018년 4월 5일 03시 39분이며, revision은 0b40e0e86acf21be91dc020079bde55c4c6923fb 입니다.
+이 문서는 아래의 영문 원본을 번역했습니다.
+* [TUTORIAL.md](https://github.com/EOSIO/eos/blob/master/TUTORIAL.md)
+* 원본 커밋 시점 : 한국 표준시 2018년 4월 5일 03시 39분
+* 리비전 : 0b40e0e86acf21be91dc020079bde55c4c6923fb
