@@ -425,4 +425,4 @@ executed transaction: 5a63b4de8a1da415590778f163c5ed26dc164c960185b20fd834c297cf
 이 문서는 아래의 위키 영문 원본을 번역했습니다.
 * [Getting Started With Contracts](https://github.com/eosio/eos/wiki/Tutorial-Getting-Started-With-Contracts)
 * 번역한 위키 원본 리비전 : 669211e579aa1fef575a0cb1ea0e6d14ced3371f
-* 튜토리얼 원본은 EOSIO `eos` 저장소에 [TUTORIAL.md](https://github.com/EOSIO/eos/blob/master/TUTORIAL.md) 파일로 있었다가 EOSIO Dawn 3.0 출시와 함께 내용의 변경 없이 한국 표준시로 2018년 4월 6일에 리비전 669211e579aa1fef575a0cb1ea0e6d14ced3371f로 위 주소의 위키로 옮겨졌습니다.
+* 튜토리얼 원본은 EOSIO `eos` 소스 코드 저장소에 [TUTORIAL.md](https://github.com/EOSIO/eos/blob/master/TUTORIAL.md) 파일로 있었다가 EOSIO Dawn 3.0 출시와 함께 내용의 변경 없이 한국 표준시로 2018년 4월 6일에 리비전 669211e579aa1fef575a0cb1ea0e6d14ced3371f로 위 주소의 위키로 옮겨졌습니다.
