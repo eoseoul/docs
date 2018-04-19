@@ -270,3 +270,6 @@ cleos get currency balance eosio.token alice eos
 
 * 원문 : https://github.com/EOSIO/eos/blob/master/contracts/dice/README.md
 * 번역 기준 리비전 : 93d5f9718ed68fe7fc139529459aa307a9d8c406
+* 관련 코드
+  * https://github.com/EOSIO/eos/blob/master/contracts/dice/dice.abi
+  * https://github.com/EOSIO/eos/blob/master/contracts/dice/dice.cpp
