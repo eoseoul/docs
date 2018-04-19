@@ -8,8 +8,11 @@
 
 - EOSIO wiki
   * [Setting Up A Local Environment](https://github.com/eoseoul/docs/blob/master/ko/translations/Local-Environment.md)
+  * [Accounts & Permissions](https://github.com/eoseoul/docs/blob/master/ko/translations/Accounts-%26-Permissions.md)
   * [Getting Started with Smart Contracts](https://github.com/eoseoul/docs/blob/master/ko/translations/TUTORIAL.md)
   * [eosio.token, Exchange, and eosio.msig Contracts](https://github.com/eoseoul/docs/blob/master/ko/translations/Tutorial-eosio-token-Contract.md)
   * [Hello World Tutorial](https://github.com/eoseoul/docs/blob/master/ko/translations/Tutorial-Hello-World-Contract.md)
+  * [Smart Contracts](https://github.com/eoseoul/docs/blob/master/ko/translations/Smart-Contract.md)
   * [Tic-Tac-Toe](https://github.com/eoseoul/docs/blob/master/ko/translations/Tutorial-Tic-Tac-Toe.md)
+  * [Dice](https://github.com/eoseoul/docs/blob/master/ko/translations/Dice.md)
   * [Single Host Multi-Node (Private) Testnet](https://github.com/eoseoul/docs/blob/master/ko/translations/Testnet-Single-Host-Multinode.md)
