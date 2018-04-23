@@ -7,6 +7,7 @@
   * [EOSIO Dawn 3.0 Now Available](https://github.com/eoseoul/docs/blob/master/ko/translations/Dawn_3_Now_Available.md)
 
 - EOSIO wiki
+  * [Glossary](https://github.com/eoseoul/docs/blob/master/ko/translations/Glossary.md)
   * [Setting Up A Local Environment](https://github.com/eoseoul/docs/blob/master/ko/translations/Local-Environment.md)
   * [Accounts & Permissions](https://github.com/eoseoul/docs/blob/master/ko/translations/Accounts-%26-Permissions.md)
   * [Getting Started with Smart Contracts](https://github.com/eoseoul/docs/blob/master/ko/translations/TUTORIAL.md)
