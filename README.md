@@ -1,5 +1,10 @@
 # EOSeoul Documentation
 
+## EOSIO Benchmark
+
+- [EOSIO Benchmark Report 20180423](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_benchmark_20180423.pdf)
+- [EOSIO Benchmark scripts](https://github.com/eoseoul/scripts/tree/master/bmt_client)
+
 ## Korean Translations
 
 - EOSIO Documents
