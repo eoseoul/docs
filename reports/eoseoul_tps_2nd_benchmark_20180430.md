@@ -43,7 +43,7 @@ EOSeoul performed BlockOne’s lab test method and recorded 1200+ TPS  with a in
 
 #### Benchmark 2. C5.2xlarge - EC2 1 : FN 1 + BPN 1
 * 20x20 : 1000 TPS processed. Very stable. BP node CPU 30% , Full node 65%
-* 20x22 : 1100 TPS processed. Very stable. BP node CPU 34~35%, Full node 75%
+* 20x22 : 1100 TPS processed. Very stable. BP node CPU 34-35%, Full node 75%
 * 20x24 : 1200 TPS processed. Fairly stable. BP node CPU 38%, Full node 80%
 * 20x26 : 1300 TPS cannt be achieved. Approx 1000 TPS. BP Ndoe CPU : 43%, Full node : 83% 
 * 50x60 : 1200 TPS. Same as above.
@@ -52,27 +52,27 @@ EOSeoul performed BlockOne’s lab test method and recorded 1200+ TPS  with a in
 #### Benchmark 3. C5 EC2 2 machines : FN1 + BPN1
 * 20x20 : 1000 TPS processed. Very stable. BP node CPU 30% , Full node 60%
 * 20x22 : 1100 TPS processed. Very stable. BP node CPU 36%, Full node 70%
-* 20x24 : 1200 TPS processed. Fairly stable but feels like there is a little bit of queuing up. BP node CPU 38%, Full node 78~80%
-* 20x26 : 1300 TPS processed. Fairly stable. Actually feels better than 1200 TPS. BP node 42%, Full node 82~84% 
+* 20x24 : 1200 TPS processed. Fairly stable but feels like there is a little bit of queuing up. BP node CPU 38%, Full node 78-80%
+* 20x26 : 1300 TPS processed. Fairly stable. Actually feels better than 1200 TPS. BP node 42%, Full node 82-84% 
 * 20x28 : 1400 TPS should be possible but in reality records 1000 TPS. CPU usage is volatile.
 
 #### Benchmark 4. C5 EC2 3 machines: FN2 + BPN1
-* 20x20 : 1000 TPS. Very stable. BP node 33~38% , Full node1 58~64%, Full node2 52~56% 
-* 20x22 : 1100TPS. Very stable. BP node 38~40%, Full node1 68~72%, Full node2 58~64%
-* 20x24 : 1200TPS. Very stable. BP node 40~42%, Full node1 74~80%, Full node2 60~70%
-* 20x26 : 1300TPS. Not stable. Approx 1000~1100 TPS, BP, Full node shows volatile CPU usage. At certain points of time TPS records 966 but then drops down to 99. Obviously CPU usage is low when TPS is low.
+* 20x20 : 1000 TPS. Very stable. BP node 33-38% , Full node1 58-64%, Full node2 52-56% 
+* 20x22 : 1100TPS. Very stable. BP node 38-40%, Full node1 68-72%, Full node2 58-64%
+* 20x24 : 1200TPS. Very stable. BP node 40-42%, Full node1 74-80%, Full node2 60-70%
+* 20x26 : 1300TPS. Not stable. Approx 1000-1100 TPS, BP, Full node shows volatile CPU usage. At certain points of time TPS records 966 but then drops down to 99. Obviously CPU usage is low when TPS is low.
 * 20x28 : 1400 TPS Unable to be processed. BMT stopped due to error. 
-* 20x12x2 : 600+600 TPS. Stable. Slight queuing maybe due to broadcast time or network delivery time from using 2 nodes recording 600TPS each. BP node : 40~44%, Full node1 : 68~74%, Full node2 : 76~80%, Full node2 records slightly higher CPU usage. 
-* 20x14x2 : 700+700TPS. Records 1400 TPS at a certain moment but error occurs on one of the 2 nodes. Error occurs as CPU allocation is not possible. BP node 58~64%, Full node : max 98%+, test terminated due to error so CPU usage doesn’t mean much
+* 20x12x2 : 600+600 TPS. Stable. Slight queuing maybe due to broadcast time or network delivery time from using 2 nodes recording 600TPS each. BP node : 40-44%, Full node1 : 68-74%, Full node2 : 76-80%, Full node2 records slightly higher CPU usage. 
+* 20x14x2 : 700+700TPS. Records 1400 TPS at a certain moment but error occurs on one of the 2 nodes. Error occurs as CPU allocation is not possible. BP node 58-64%, Full node : max 98%+, test terminated due to error so CPU usage doesn’t mean much
 * 20x20+20x6 : 1000 + 300 TPS. Unstable and TEST Job (300TPS) terminated. CPU results same as no. 7 
 
 ### Activate JIT in cloud environment and verify BlockOne’s test methodology
 
 #### Benchmark 5. C5 EC2 2 machines : FN1 + BPN1 (Using WAVM ~ JIT)
-* 20x20(1000 TPS) : Reach 1000TPS very comfortably. CPU usage BP node 30~34%, Full node approx 33~37%
+* 20x20(1000 TPS) : Reach 1000TPS very comfortably. CPU usage BP node 30-34%, Full node approx 33-37%
 * 20x30(1500 TPS) : Reach 1500 TPS very comfortably. BP node 50%, Full node approx. 55%
-* 20x36(1800 TPS) : Stable 1800 TPS. BP node 56~60%, Full node approx. 66~70%
-* 20x38(1900 TPS) : Stable 1900 TPS. BP node 58~62%, Full node approx. 68~72%
+* 20x36(1800 TPS) : Stable 1800 TPS. BP node 56-60%, Full node approx. 66-70%
+* 20x38(1900 TPS) : Stable 1900 TPS. BP node 58-62%, Full node approx. 68-72%
 * 20x40(2000 TPS) : Fails immediately. Looks like overload. Need testing on a servicer with a higher CPU Clock or need further adjustments. 
 
 ### Comment on Test results
