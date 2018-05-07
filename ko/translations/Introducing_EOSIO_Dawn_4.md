@@ -153,7 +153,7 @@ EOSIO의 IBC 알고리즘은 최종성을 확실히 하기 위해 DPOS LIB에 �
 비잔틴(배반자)가 되지 않고는 두 개의 노드가 서로 다른 LIB에 도달하기가
 불가능함을 보장하는 우아한 개선 방안을 LIB 알고리즘에 반영해왔습니다.
 게다가, 단일 피어의 비잔틴(배반) 행위를 탐지할 수도 있습니다. 
-자세한 내용은 [여기](https://github.com/EOSIO/eos/issues/2718)를 참조하세요.
+자세한 내용은 [여기](https://github.com/eoseoul/docs/blob/master/ko/translations/Fix_DPoS_Loss_of_Consensus.md)를 참조하세요.
 
 레거시 체인들과 블록체인간 통신을 어렵고 매우 높은 지연시간이 걸리게 만드는
 이유는 바로 비트코인과 이더리움의 최종성이 결여되었기 때문입니다. DPOS에
