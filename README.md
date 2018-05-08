@@ -12,6 +12,7 @@
   * [EOSIO Technical White Paper v2](https://github.com/eoseoul/docs/blob/master/ko/translations/TechnicalWhitePaperV2.md)
   * [EOSIO Dawn 3.0 Now Available](https://github.com/eoseoul/docs/blob/master/ko/translations/Dawn_3_Now_Available.md)
   * [Introducing EOSIO Dawn 4.0](https://github.com/eoseoul/docs/blob/master/ko/translations/Introducing_EOSIO_Dawn_4.md)
+  * [Fix DPOS Loss of Consensus due to conflicting Last Irreversible Block](https://github.com/eoseoul/docs/blob/master/ko/translations/Fix_DPoS_Loss_of_Consensus.md)
 
 - EOSIO wiki
   * [Glossary](https://github.com/eoseoul/docs/blob/master/ko/translations/Glossary.md)
