@@ -11,7 +11,7 @@ r1 곡선을 사용하는 데모입니다. r1 비밀키는 secure enclave에 저
 사용할 수 있습니다. 적절한 작동인지 검증하기 위해서, 어플리케이션은
 EOSIO 코드 베이스에서 공개키 복구의 검증을 가능케 합니다.
  
-# 빌드하고 사인하기 Building and Signing
+# 빌드하고 사인하기
 `applesedemo` 어플리케이션은 EOSIO 소스 트리에서 macOS 빌드로 컴파일됩니다.
 사용하는 API는 macOS 10.12 이상이 필요합니다(iOS 10 이상에서도 역시 작동할
 것입니다). 그러나 Secure Enclave를 사용하기 위해선 어플리케이션은

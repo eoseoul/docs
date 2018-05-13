@@ -27,3 +27,4 @@
   * [Tic-Tac-Toe](https://github.com/eoseoul/docs/blob/master/ko/translations/Tutorial-Tic-Tac-Toe.md)
   * [Dice](https://github.com/eoseoul/docs/blob/master/ko/translations/Dice.md)
   * [Single Host Multi-Node (Private) Testnet](https://github.com/eoseoul/docs/blob/master/ko/translations/Testnet-Single-Host-Multinode.md)
+  * [eosio-applesedemo README](https://github.com/EOSIO/eos/blob/master/programs/eosio-applesedemo/README.md)
