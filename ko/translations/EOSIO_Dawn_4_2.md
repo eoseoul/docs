@@ -125,7 +125,7 @@ EOSIO Dawn 4.2가 깃헙에 올라와 있습니다.(https://github.com/EOSIO/eos
 
 ## 추후 릴리즈
 
-우리는 6월 1일에 EOSIO 1.0을 예정하고 있습니다. 깃헙의 버전 1.0 마일스톤(https://github.com/EOSIO/eos/milestone/10)을 지켜보시면 다음 몇 주간 우리가 집중해서 작업하고 있는 이슈들을 따라잡으실 수 있습니다.
+우리는 6월 1일에 EOSIO 1.0을 예정하고 있습니다. 깃헙의 버전 1.0 마일스톤(https://github.com/EOSIO/eos/milestone/10) 을 지켜보시면 다음 몇 주간 우리가 집중해서 작업하고 있는 이슈들을 따라잡으실 수 있습니다.
 
 
 ## 번역 정보

@@ -120,11 +120,11 @@ bidname( account_name bidder, account_name desired, asset bid )
 
 ### BIOS 부트 프로세스 튜토리얼
 
-EOSIO 네트워크를 부트하는 데 필요한 과정을 설명하는 스크립트와 자세한 튜토리얼(https://github.com/EOSIO/eos/tree/master/programs/bios-boot-tutorial)을 준비했습니다. 멀티시그(multi-sig)를 이용해서 프로듀서를 통해 `eosio.system` 컨트랙트와 `eosio.token` 컨트랙트를 업그레이드하는 내용을 담은 추가적인 과정을 설명하는 내용을 다음주에 스크립트와 튜토리얼에 추가할 것입니다.
+EOSIO 네트워크를 부트하는 데 필요한 과정을 설명하는 스크립트와 자세한 튜토리얼(https://github.com/EOSIO/eos/tree/master/programs/bios-boot-tutorial) 을 준비했습니다. 멀티시그(multi-sig)를 이용해서 프로듀서를 통해 `eosio.system` 컨트랙트와 `eosio.token` 컨트랙트를 업그레이드하는 내용을 담은 추가적인 과정을 설명하는 내용을 다음주에 스크립트와 튜토리얼에 추가할 것입니다.
 
 ## 테스트넷
 
-우리가 운영하고 있는 내부적인 테스트넷은 강건하게 동작하고 있습니다. 다수의 커뮤니티 테스트넷을 기쁜 마음으로 지켜보고 있고 우리가 거기서 목격하고 있는 작업들에 대해서 자랑스럽습니다. 특기할 만한 테스트넷은 최근 빌드(DAWN-2018-05-16)로 동작하고 있고 70개 이상의 노드가 연동된 EOS Jungle 테스트넷(http://dev.cryptolions.io)입니다. EOSIO 커뮤니티 테스트넷 텔레그램(https://t.me/CommunityTestnet)을 통해서 최근 소식에 귀기울여주세요.
+우리가 운영하고 있는 내부적인 테스트넷은 강건하게 동작하고 있습니다. 다수의 커뮤니티 테스트넷을 기쁜 마음으로 지켜보고 있고 우리가 거기서 목격하고 있는 작업들에 대해서 자랑스럽습니다. 특기할 만한 테스트넷은 최근 빌드(DAWN-2018-05-16)로 동작하고 있고 70개 이상의 노드가 연동된 EOS Jungle 테스트넷(http://dev.cryptolions.io) 입니다. EOSIO 커뮤니티 테스트넷 텔레그램(https://t.me/CommunityTestnet) 을 통해서 최근 소식에 귀기울여주세요.
 
 ## 패트로니오스 - Patroneos
 
@@ -150,7 +150,7 @@ EOSIO Dawn 4.1은 깃헙에 올라와있습니다. (https://github.com/EOSIO/eos
 
 ## 추후 릴리즈
 
-우리는 다음주 금요일, 그러니까 5월 25일 경 프리릴리즈(Dawn 4.2)를 한 번 더 계획하고 있고 6월 1일에 EOSIO 1.0을 예정하고 있습니다. 깃헙의 버전 1.0 마일스톤(https://github.com/EOSIO/eos/milestone/10)을 지켜보시면 다음 몇 주간 우리가 집중해서 작업하고 있는 이슈들을 따라잡으실 수 있습니다.
+우리는 다음주 금요일, 그러니까 5월 25일 경 프리릴리즈(Dawn 4.2)를 한 번 더 계획하고 있고 6월 1일에 EOSIO 1.0을 예정하고 있습니다. 깃헙의 버전 1.0 마일스톤(https://github.com/EOSIO/eos/milestone/10) 을 지켜보시면 다음 몇 주간 우리가 집중해서 작업하고 있는 이슈들을 따라잡으실 수 있습니다.
 
 ## 번역 정보
 
