@@ -1,22 +1,32 @@
 # EOSeoul Documentation
 
-## EOSIO Benchmark
+## EOSeoul
 
-- [EOSIO Benchmark 1st Report 20180423](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_benchmark_20180423.pdf)
-- [EOSIO Benchmark 2nd Report 20180430](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_2nd_benchmark_20180430.md)
-- [EOSIO Benchmark scripts](https://github.com/eoseoul/scripts/tree/master/bmt_client)
+- EOSIO Benchmark
+  * [EOSIO Benchmark 1st Report 20180423](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_benchmark_20180423.pdf)
+  * [EOSIO Benchmark 2nd Report 20180430](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_2nd_benchmark_20180430.md)
+  * [EOSIO Benchmark scripts](https://github.com/eoseoul/scripts/tree/master/bmt_client)
+
+- [EOSIO Testnet Builder](https://github.com/eoseoul/testnetbuilder)
 
 ## Korean Translations
 
-- EOSIO Documents
-  * [EOS.IO DAWN 2.0 Released & Development Update](https://github.com/eoseoul/docs/blob/master/ko/translations/Dawn_2_Released.md)
+- EOSIO Technical White Paper V2
   * [EOSIO Technical White Paper v2](https://github.com/eoseoul/docs/blob/master/ko/translations/TechnicalWhitePaperV2.md)
+
+- EOSIO Release Notes
+  * [The Dawn of EOS.IO](https://github.com/eoseoul/docs/blob/master/ko/translations/Dawn_of_EOS.md)
+  * [EOS.IO DAWN 2.0 Released & Development Update](https://github.com/eoseoul/docs/blob/master/ko/translations/Dawn_2_Released.md)
   * [EOSIO Dawn 3.0 Now Available](https://github.com/eoseoul/docs/blob/master/ko/translations/Dawn_3_Now_Available.md)
   * [Introducing EOSIO Dawn 4.0](https://github.com/eoseoul/docs/blob/master/ko/translations/Introducing_EOSIO_Dawn_4.md)
-  * [Fix DPOS Loss of Consensus due to conflicting Last Irreversible Block](https://github.com/eoseoul/docs/blob/master/ko/translations/Fix_DPoS_Loss_of_Consensus.md)
   * [EOSIO Dawn 4.0 Release](https://github.com/eoseoul/docs/blob/master/ko/translations/EOSIO_Dawn_4_Release.md)
+  * [EOSIO Dawn 4.1 Release](https://github.com/eoseoul/docs/blob/master/ko/translations/EOSIO_Dawn_4_1.md)
+  * [EOSIO Dawn 4.2 Release](https://github.com/eoseoul/docs/blob/master/ko/translations/EOSIO_Dawn_4_2.md)
 
-- EOSIO wiki
+- EOSIO Technical Documents
+  * [Fix DPOS Loss of Consensus due to conflicting Last Irreversible Block](https://github.com/eoseoul/docs/blob/master/ko/translations/Fix_DPoS_Loss_of_Consensus.md)
+
+- EOSIO Wiki
   * [Glossary](https://github.com/eoseoul/docs/blob/master/ko/translations/Glossary.md)
   * [Setting Up A Local Environment](https://github.com/eoseoul/docs/blob/master/ko/translations/Local-Environment.md)
   * [Accounts & Permissions](https://github.com/eoseoul/docs/blob/master/ko/translations/Accounts-%26-Permissions.md)
