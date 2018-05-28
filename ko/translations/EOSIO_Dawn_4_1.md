@@ -141,12 +141,12 @@ EOSIO Dawn 4.1은 깃헙에 올라와있습니다. (https://github.com/EOSIO/eos
 
 깃헙에 아래 정보를 포함시켜서 잠재적으로 보일 지도 모르는 버그를 계속 리포트해주시길 바랍니다.
 
-Testnet: 이슈를 발견한 테스트넷이 어디인지
-EOSIO git version: `nodeos -v output` 결과 문자열
-config.ini: 사용하고 있는 `config.ini` 파일을 첨부해주세요
-genesis.json: 사용하고 있는 `genesis.json` 파일을 첨부해주세요
-Command line: 사용한 `nodeos` 전체 커맨드 명령어
-Console output: 확인하고 있는 에러와 관련된 콘솔 디버그 출력값 (짧으면 아예 이슈 설명에 붙여넣어도 좋습니다)
+* Testnet: 이슈를 발견한 테스트넷이 어디인지
+* EOSIO git version: `nodeos -v output` 결과 문자열
+* config.ini: 사용하고 있는 `config.ini` 파일을 첨부해주세요
+* genesis.json: 사용하고 있는 `genesis.json` 파일을 첨부해주세요
+* Command line: 사용한 `nodeos` 전체 커맨드 명령어
+* Console output: 확인하고 있는 에러와 관련된 콘솔 디버그 출력값 (짧으면 아예 이슈 설명에 붙여넣어도 좋습니다)
 
 ## 추후 릴리즈
 
