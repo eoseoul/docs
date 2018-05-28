@@ -2,12 +2,12 @@
 
 ## EOSeoul
 
+- [EOSIO Testnet Builder](https://github.com/eoseoul/testnetbuilder) - Full Suites for EOSIO Launching from Booting to Live Production.
+
 - EOSIO Benchmark
   * [EOSIO Benchmark 1st Report 20180423](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_benchmark_20180423.pdf)
   * [EOSIO Benchmark 2nd Report 20180430](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_2nd_benchmark_20180430.md)
   * [EOSIO Benchmark scripts](https://github.com/eoseoul/scripts/tree/master/bmt_client)
-
-- [EOSIO Testnet Builder](https://github.com/eoseoul/testnetbuilder)
 
 ## Korean Translations
 
