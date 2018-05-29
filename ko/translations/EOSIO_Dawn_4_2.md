@@ -49,7 +49,7 @@ EOSIO 버전 1.0이 바로 코 앞에 있는 상황에서, 오늘 우리는 EOSI
 
 참고로 다음과 같은 RPC API가 있습니다.
 * POST /v1/producer/pause - 블록 생산 일시 정지
-* POST /v1/producer/resume - 일시 정지된 블록 생산을 재개\
+* POST /v1/producer/resume - 일시 정지된 블록 생산을 재개
 * POST /v1/producer/paused - 현재 노드가 일시 정지된 상태인지 아닌지에 따라 true/false를 돌려줌
 
 **Genesis JSON 파일은 더이상 기본으로 생성되지 않음**
