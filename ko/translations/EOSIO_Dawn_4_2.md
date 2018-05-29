@@ -82,7 +82,7 @@ Boost 라이브러리 버전을 1.66에서 1.67로 업데이트했습니다.
 
 "data/shared_mem" 디렉토리가 "data/state"로 변경되었습니다.
 
-config.ini의 옵션 중 "block-log-dir"는 "blocks-dir로 변경되었습니다.
+config.ini의 옵션 중 "block-log-dir"는 "blocks-dir"로 변경되었습니다.
 
 새로운 활성 프로듀서 스케줄을 제청한다(propose)는 함수의 의도를 보다 정확히 반영하기 위해서, "set_active_producers" 기본 메소드를 "set_proposed_producers"로 변경했습니다.
 
