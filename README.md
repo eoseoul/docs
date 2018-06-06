@@ -9,6 +9,9 @@
   * [EOSIO Benchmark 2nd Report 20180430](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_2nd_benchmark_20180430.md)
   * [EOSIO Benchmark scripts](https://github.com/eoseoul/scripts/tree/master/bmt_client)
 
+- Presentations
+  * [Bancor Protocol: Liquidity Providing Algorithm for RAM](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_presentation_on_bancor_20180529.pptx) on EOSIO Developer Meetup in Seoul / 2018.05.30 / PowerPoint file
+
 ## Korean Translations
 
 - EOSIO Technical White Paper V2
