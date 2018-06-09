@@ -3,6 +3,7 @@
 ## EOSeoul
 
 - [EOSIO Testnet Builder](https://github.com/eoseoul/testnetbuilder) - Full Suites for EOSIO Launching from Booting to Live Production.
+- [`eos-ramcost` contracts collection](https://github.com/eoseoul/eos-ramcost) - Adjusting supply of a token and connector balance of bancor during final phase of Boot sequence.
 
 - EOSIO Benchmark
   * [EOSIO Benchmark 1st Report 20180423](https://github.com/eoseoul/docs/blob/master/reports/eoseoul_tps_benchmark_20180423.pdf)
