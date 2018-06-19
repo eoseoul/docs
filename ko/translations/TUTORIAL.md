@@ -28,7 +28,7 @@
 만들 수 있습니다.  
 
 ```
-$ nodeos -e -p eosio --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --plugin eosio::account_history_api_plugin 
+$ nodeos -e -p eosio --plugin eosio::chain_api_plugin --plugin eosio::history_api_plugin
 ...
 eosio generated block 046b9984... #101527 @ 2018-04-01T14:24:58.000 with 0 trxs
 eosio generated block 5e527ee2... #101528 @ 2018-04-01T14:24:58.500 with 0 trxs
@@ -41,7 +41,9 @@ eosio generated block 5e527ee2... #101528 @ 2018-04-01T14:24:58.500 with 0 trxs
 확인할 수 있습니다.
 
 ```
-eosio generated block 046b9984... #101527 @ 2018-04-01T14:24:58.000 with 0 trxs
+...
+3165501ms thread-0   producer_plugin.cpp:944       produce_block        ] Produced block 00000a4c898956e0... #2636 @ 2018-05-25T16:52:45.500 signed by eosio [trxs: 0, lib: 2635, confirmed: 0]
+3166004ms thread-0   producer_plugin.cpp:944       produce_block        ] Produced block 00000a4d2d4a5893... #2637 @ 2018-05-25T16:52:46.000 signed by eosio [trxs: 0, lib: 2636, confirmed: 0]
 ```
 
 이 로그는 다음 세 가지 정보를 알려줍니다. 1. 방금 만든 블록체인이 라이브
@@ -95,20 +97,6 @@ Locked: default
 ```
 
 남은 튜토리얼을 진행하려면 지갑을 잠금 해제한 상태로 두면 됩니다.
-
-모든 블록체인은 `eosio`이라는 유일한 초기화 계정의 master key로 시작합니다.
-블록체인을 이용하기 위해서는 `eosio` 계정의 비밀키를 지갑에 담아야 합니다.
-
-다음 명령어를 통해 `eosio`의 master key를 지갑에 담겠습니다. master key는
-`nodeos` 설정 디렉토리의 `config.ini` 파일에 있습니다. 튜토리얼에서는 기본
-설정 디렉토리를 사용했습니다. 리눅스 시스템의 경로는
-`~/.local/share/eosio/nodeos/config`이고, MacOS 시스템의 경로는
-`~/Library/Application Support/eosio/nodeos/config`입니다.
-
-```
-$ cleos wallet import 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
-imported private key for: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
-```
 
 ## BIOS 컨트랙트 불러오기
 
