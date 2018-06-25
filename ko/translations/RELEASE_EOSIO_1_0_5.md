@@ -5,15 +5,14 @@
 
 ## Pull Request #4158
 
-* heifner : Let's add a method to transaction_receipt for determination of delayed/deferred transactions and unit tests for next release.
-* testcode77 : 
-If the number of delayed transactions increases, this case is meaningless. My opinion is that the handling of delayed transactions has to change.
+* heifner : transaction_receipt에 메소드를 하나 추가해서 지연/유보 트랜잭션을 결정하게 하고, 다음 버전에서 유닛 테스트를 추가하겠습니다.
+* testcode77 : 지연된(delayed) 트랜잭션의 수가 증가하면, 이 경우가 무의미해집니다. 제 생각으로는 지연 트랜잭션을 다루는 방법이 변해야 합니다.
 
 ## [이슈 #4159](https://github.com/EOSIO/eos/issues/4159) : Throw unexpected fails in apply_block - revisit
 
-[#4158](https://github.com/EOSIO/eos/pull/4158) quick fix needs unittests. Also determine why existing unittests that push blocks to copy of chain did not catch this.
+[#4158](https://github.com/EOSIO/eos/pull/4158) 퀵 픽스에 따른 유닛 테스트가 필요함. 또한 체인에 블록을 푸시하는 현재의 유닛 테스트가 이 경우를 잡아내지 못한 이유를 찾아야 함.
 
-[#4158](https://github.com/EOSIO/eos/pull/4158) bug fix highlights that our determination of delayed/deferred transactions is subtle. transaction_receipt trx variant contains a transaction_id_type for delayed/deferred transactions. Add a method to transaction_receipt which provides clear indication of delayed/deferred. Note that the structure of transaction_receipt can't easily change as it is part of the signed_block.
+[#4158](https://github.com/EOSIO/eos/pull/4158) 버그 픽스는 우리가 지연/유보 트랜잭션을 결정하는 방식이 미묘하다는 점을 강조하고 있음. transaction_receipt trx variant는 지연/유보 트랜잭션에 대해 transaction_id_type를 가짐. transaction_receipt에 메소드를 추가해서 명확하게 유보/지연 트랜잭션임을 드러내게 함. transaction_receipt의 구조는 그것이 signed_block의 일부이기 때문에 쉽게 변할 수 없다는 점을 주의해야 함.
 
 ## 번역 정보
 
