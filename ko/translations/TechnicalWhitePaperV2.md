@@ -157,7 +157,7 @@ EOS.IO에서는 계정에서 어떤 키 및/또는 계정 조합이 특정 유�
 
 ### 명명된 권한 수준
 
-<img align="right" src="http://eos.io/wpimg/diagram3.png" width="228.395px" height="300px" />
+<img align="right" src="https://github.com/EOSIO/Documentation/blob/images/images/diagram3.png" width="228.395px" height="300px" />
 
 EOS.IO에서 계정은 명명된 권한 수준을 정의할 수 있으며, 각 권한 수준은 보다 높은 수준의 명명된 권한에서 파생될 수 있습니다. 명명된 각 권한 수준(permission level)은 자격(authority)을 정의합니다; 자격(authority)은 키 및/혹은 다른 계정의 명명된 권한 수준으로 구성된 임계 다중 서명(threshold multi-signature) 검사입니다. 예를 들어, 계정의 액션에 "친구" 권한 수준을 설정하면 해당 계정의 친구는 이 액션을 동등하게 제어할 수 있습니다.
 
@@ -171,7 +171,7 @@ EOS.IO에서 각 계정은 컨트랙트/액션/다른 계정의 컨트랙트와 
 
 매핑이 발견되면 임계 다중 서명 과정 및 명명된 권한에 부여된 자격을 사용하여 서명 자격의 유효성을 검증합니다. 실패하면 부모 권한으로 이동하고 최종적으로는 소유자 권한 **@alice.owner**까지 이동합니다.
 
-<img align="center" src="http://eos.io/wpimg/diagram2grayscale2.jpg" width="845.85px" height="500px" />
+<img align="center" src="https://github.com/EOSIO/Documentation/blob/images/images/diagram2grayscale2.jpg" width="845.85px" height="500px" />
 
 #### 기본 권한 그룹
 또한 EOS.IO에서는 모든 계정이 모든 일을 할 수 있는 "소유자" 그룹과 소유자 그룹을 변경하는 일을 제외한 모든 일을 할 수 있는 "활동" 그룹을 가질 수 있습니다. 모든 다른 권한 그룹은 "활동" 그룹에서 파생됩니다.
@@ -375,7 +375,7 @@ DB 상태 역시 유사한 스키마를 이용해 정의됩니다. 이것으로 
 # 블록체인 간 통신
 EOS.IO는 블록체인 간 통신을 지원하도록 설계되었습니다. 이것은 액션의 존재 증명과 액션의 순서 증명을 생성하기 쉽게 함으로서 가능해졌습니다. 이 증명과 액션 전송을 위해 고안된 애플리케이션 구조가 결합되면 블록체인 간 통신과 증명 타당성 검증이 애플리케이션 개발자로부터 은닉돼, 고수준의 추상화를 개발자에게 제공합니다.
 
-<img align="right" src="http://eos.io/wpimg/Diagram1.jpg" width="362.84px" height="500px" />
+<img align="right" src="https://github.com/EOSIO/Documentation/blob/images/images/Diagram1.jpg" width="362.84px" height="500px" />
 
 ## 경량 클라이언트 검증(Light Client Validation, LCV)를 위한 머클 증명
 클라이언트가 모든 트랜잭션을 처리하지 않아도 된다면 다른 블록체인과 통합하는 것이 훨씬 쉬워집니다. 결국 거래소는 거래를 내/외부로 전달하는 것에만 관심이 있고 그 이외에는 관심이 없습니다. 또한, 거래 체인이 BP를 전적으로 의지하는 대신 예치에 대한 경량의 머클 증명을 사용할 수 있다면 이상적일 것입니다. 적어도 블록체인 내의 BP는 다른 블록체인과 동기화할 때 오버헤드를 가능한 한 최소화하기를 원합니다.
